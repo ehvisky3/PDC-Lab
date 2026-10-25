@@ -4,4 +4,9 @@ public class FIXOrderEvent extends TradeEvent {
         super(eventId, symbol, price);
     }
 
+    @Override
+    public void processEvent() {
+        System.out.println("Processing FIX order: " + symbol + " at price " + price);
+    }
+
 }
