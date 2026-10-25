@@ -22,4 +22,12 @@ public class RequestQueue {
         return queue.isEmpty();
     }
 
+    public String peek() {
+        if (queue.isEmpty()) {
+            return null;
+        }
+
+        return queue.peek();
+    }
+
 }
