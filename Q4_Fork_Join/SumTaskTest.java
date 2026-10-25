@@ -10,25 +10,31 @@ public class SumTaskTest {
             long result1 = pool.invoke(new SumTask(1, 10));
             long result2 = pool.invoke(new SumTask(1, 100));
             long result3 = pool.invoke(new SumTask(5, 15));
+            long result4 = pool.invoke(new SumTask(7, 7));
 
             System.out.println("Sum from 1 to 10: " + result1);
             System.out.println("Sum from 1 to 100: " + result2);
             System.out.println("Sum from 5 to 15: " + result3);
+            System.out.println("Sum from 7 to 7: " + result4);
 
-            boolean passed = result1 == 55
+            boolean validTestsPassed = result1 == 55
                     && result2 == 5050
-                    && result3 == 110;
+                    && result3 == 110
+                    && result4 == 7;
 
-            System.out.println("Valid range tests passed: " + passed);
+            System.out.println(
+                    "Valid range tests passed: " + validTestsPassed);
+
+            boolean invalidTestPassed = false;
 
             try {
                 new SumTask(10, 1);
-                System.out.println("Invalid range test passed: false");
-                passed = false;
-
             } catch (IllegalArgumentException e) {
-                System.out.println("Invalid range test passed: true");
+                invalidTestPassed = true;
             }
+
+            System.out.println(
+                    "Invalid range test passed: " + invalidTestPassed);
 
         } finally {
             pool.shutdown();
