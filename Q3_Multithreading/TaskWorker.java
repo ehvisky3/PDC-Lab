@@ -2,9 +2,11 @@
 public class TaskWorker implements Runnable {
 
     private String taskName;
+    private TaskCounter counter;
 
-    public TaskWorker(String taskName) {
+    public TaskWorker(String taskName, TaskCounter counter) {
         this.taskName = taskName;
+        this.counter = counter;
     }
 
     @Override
@@ -24,6 +26,9 @@ public class TaskWorker implements Runnable {
                 return;
             }
         }
+
+        counter.increment();
+        System.out.println(taskName + " completed.");
 
     }
 
