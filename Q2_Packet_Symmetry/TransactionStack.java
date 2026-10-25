@@ -20,4 +20,12 @@ public class TransactionStack {
         return stack.isEmpty();
     }
 
+    public String peek() {
+        if (stack.isEmpty()) {
+            return null;
+        }
+
+        return stack.get(stack.size() - 1);
+    }
+
 }
