@@ -10,4 +10,8 @@ public class TradeEvent {
         this.price = price;
     }
 
+    public void processEvent() {
+        System.out.println("Processing generic trade event: " + eventId);
+    }
+
 }
