@@ -1,3 +1,4 @@
+
 import java.util.concurrent.ForkJoinPool;
 
 public class SumTaskTest {
@@ -52,6 +53,10 @@ public class SumTaskTest {
             checkSum(pool, -100, 100, 0);
             checkSum(pool, -5, -1, -15);
 
+            // Test a large range containing one million numbers.
+            checkSum(pool, 1, 1_000_000, 500000500000L);
+
+            // Test that reversed ranges are rejected.
             checkInvalidRange();
 
             System.out.println("\nTests passed: " + passed);
