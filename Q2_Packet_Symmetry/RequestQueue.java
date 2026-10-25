@@ -1,3 +1,4 @@
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -15,6 +16,10 @@ public class RequestQueue {
         }
 
         return queue.remove();
+    }
+
+    public boolean isEmpty() {
+        return queue.isEmpty();
     }
 
 }
