@@ -11,6 +11,18 @@ public class MultithreadingDemo {
         thread2.start();
         thread3.start();
 
+        try {
+            thread1.join();
+            thread2.join();
+            thread3.join();
+
+            System.out.println("All tasks have completed.");
+
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.out.println("Main thread was interrupted.");
+        }
+
     }
 
 }
