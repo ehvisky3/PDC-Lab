@@ -1,3 +1,4 @@
+
 import java.util.concurrent.RecursiveTask;
 
 public class SumTask extends RecursiveTask<Long> {
@@ -8,6 +9,12 @@ public class SumTask extends RecursiveTask<Long> {
     private int end;
 
     public SumTask(int start, int end) {
+
+        if (start > end) {
+            throw new IllegalArgumentException(
+                    "Start must not be greater than end.");
+        }
+
         this.start = start;
         this.end = end;
     }
