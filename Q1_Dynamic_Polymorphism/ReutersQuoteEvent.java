@@ -4,4 +4,9 @@ public class ReutersQuoteEvent extends TradeEvent {
         super(eventId, symbol, price);
     }
 
+    @Override
+    public void processEvent() {
+        System.out.println("Processing Reuters quote: " + symbol + " at price " + price);
+    }
+
 }
