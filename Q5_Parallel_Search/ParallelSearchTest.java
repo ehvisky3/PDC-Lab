@@ -1,4 +1,3 @@
-
 import java.util.concurrent.ForkJoinPool;
 
 public class ParallelSearchTest {
@@ -14,45 +13,74 @@ public class ParallelSearchTest {
 
         try {
             // Test 1: Search for an existing value.
-            int target1 = 67;
-
             int result1 = pool.invoke(
                     new ParallelSearchTask(
-                            numbers, target1, 0, numbers.length));
+                            numbers, 67, 0, numbers.length));
 
             boolean test1Passed =
-                    result1 != -1 && numbers[result1] == target1;
+                    result1 != -1 && numbers[result1] == 67;
 
             System.out.println(
                     "Search for 67 passed: " + test1Passed);
 
             // Test 2: Search for a missing value.
-            int target2 = 100;
-
             int result2 = pool.invoke(
                     new ParallelSearchTask(
-                            numbers, target2, 0, numbers.length));
+                            numbers, 100, 0, numbers.length));
 
             boolean test2Passed = result2 == -1;
 
             System.out.println(
                     "Search for 100 passed: " + test2Passed);
 
-            // Test 3: Search for the first array element.
-            int target3 = 12;
-
+            // Test 3: Search for the first element.
             int result3 = pool.invoke(
                     new ParallelSearchTask(
-                            numbers, target3, 0, numbers.length));
+                            numbers, 12, 0, numbers.length));
 
             boolean test3Passed = result3 == 0;
 
             System.out.println(
-                    "Search for first element passed: " + test3Passed);
+                    "Search for first element passed: "
+                            + test3Passed);
 
-            // Display the overall result.
+            // Test 4: Search an empty range.
+            int result4 = pool.invoke(
+                    new ParallelSearchTask(numbers, 12, 0, 0));
+
+            boolean test4Passed = result4 == -1;
+
+            System.out.println(
+                    "Empty range test passed: " + test4Passed);
+
+            // Test 5: Reject a null array.
+            boolean test5Passed = false;
+
+            try {
+                new ParallelSearchTask(null, 10, 0, 0);
+            } catch (IllegalArgumentException e) {
+                test5Passed = true;
+            }
+
+            System.out.println(
+                    "Null array validation passed: " + test5Passed);
+
+            // Test 6: Reject an invalid range.
+            boolean test6Passed = false;
+
+            try {
+                new ParallelSearchTask(
+                        numbers, 10, 0, numbers.length + 1);
+            } catch (IllegalArgumentException e) {
+                test6Passed = true;
+            }
+
+            System.out.println(
+                    "Invalid range validation passed: " + test6Passed);
+
             boolean allPassed =
-                    test1Passed && test2Passed && test3Passed;
+                    test1Passed && test2Passed && test3Passed
+                    && test4Passed && test5Passed && test6Passed;
 
             System.out.println("All tests passed: " + allPassed);
 
