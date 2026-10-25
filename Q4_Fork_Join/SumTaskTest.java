@@ -52,11 +52,11 @@ public class SumTaskTest {
             checkSum(pool, -3, 3, 0);
             checkSum(pool, -100, 100, 0);
             checkSum(pool, -5, -1, -15);
-
-            // Test a large range containing one million numbers.
             checkSum(pool, 1, 1_000_000, 500000500000L);
 
-            // Test that reversed ranges are rejected.
+            // Test a range starting at zero.
+            checkSum(pool, 0, 10, 55);
+
             checkInvalidRange();
 
             System.out.println("\nTests passed: " + passed);
