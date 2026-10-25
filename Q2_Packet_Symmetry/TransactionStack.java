@@ -16,4 +16,8 @@ public class TransactionStack {
         return stack.remove(stack.size() - 1);
     }
 
+    public boolean isEmpty() {
+        return stack.isEmpty();
+    }
+
 }
