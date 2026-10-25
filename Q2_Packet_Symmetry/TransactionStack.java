@@ -8,4 +8,12 @@ public class TransactionStack {
         stack.add(packet);
     }
 
+    public String pop() {
+        if (stack.isEmpty()) {
+            return null;
+        }
+
+        return stack.remove(stack.size() - 1);
+    }
+
 }
