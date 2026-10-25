@@ -9,4 +9,12 @@ public class RequestQueue {
         queue.add(request);
     }
 
+    public String dequeue() {
+        if (queue.isEmpty()) {
+            return null;
+        }
+
+        return queue.remove();
+    }
+
 }
