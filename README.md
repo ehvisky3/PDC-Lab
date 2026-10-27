@@ -1,35 +1,50 @@
-# PDC Lab 
-
-## Parallel and Distributed Computing Lab
-
-**Course Code:** CS-426L  
-**Semester:** Fall 2026  
-**University:** Air University, Kharian
-
-## Assignment Questions
-
-### Q1 - Dynamic Polymorphism
-Java inheritance, method overriding, and polymorphic message passing.
-
-### Q2 - Packet Symmetry
-Custom LIFO stack and FIFO queue for packet symmetry verification.
-
-### Q3 - Multithreading
-Concurrent telemetry and log processing using Java threads.
-
-### Q4 - Fork/Join
-Parallel portfolio risk calculation and threshold processing.
-
-### Q5 - Parallel Search
-Parallel minimum and maximum sensor data search.
-
-### Q6 - Concurrency Benchmark
-Comparison of synchronized maps and ConcurrentHashMap.
-
-### Q7 - Cache Locality
-Comparison of row-major and column-major matrix traversal.
-
-## Repository
-
-GitHub: https://github.com/ehvisky3/PDC-Lab
-
+- Create README file with project title
+- Add directory structure overview for all seven questions
+- Document Question 01 high-frequency trading engine architecture
+- Explain TradeEvent superclass protected fields and constructor
+- Describe baseline dispatch method in TradeEvent
+- Document FixOrderEvent inheritance and super constructor call
+- Explain 0.15 percent exchange fee calculation in FixOrderEvent
+- Describe ReutersQuoteEvent bid and ask price fields
+- Explain real-time bid-ask spread calculation in ReutersQuoteEvent
+- Document polymorphic event array execution in TradingEngineApp
+- Add compilation and run commands for Question 01
+- Document Question 02 zero-trust packet symmetry verifier
+- Explain fixed-capacity array storage in TransactionStack
+- Describe push pop peek and isEmpty methods in TransactionStack
+- Explain FIFO circular buffer pointers in RequestQueue
+- Describe enqueue dequeue and isEmpty methods in RequestQueue
+- Document palindrome verification loop in PacketSymmetryAuditor
+- Add compilation and run commands for Question 02
+- Document Question 03 multithreaded telemetry engine
+- Explain Runnable interface implementation in LogProcessorTask
+- Describe 1000ms sleep cycle in LogProcessorTask loop
+- Explain direct Thread extension in TelemetryThread
+- Describe 800ms health check loop in TelemetryThread
+- Document custom worker thread naming in AsyncWebEngineApp
+- Explain concurrent start and state logging in AsyncWebEngineApp
+- Add compilation and run commands for Question 03
+- Document Question 04 ForkJoin portfolio assessment engine
+- Explain RecursiveTask sum calculation in ParallelRiskCalculator
+- Describe sequential threshold of 1000 elements for subtasks
+- Document fork and join reduction calls in ParallelRiskCalculator
+- Explain RecursiveAction 5 percent penalty in PortfolioThresholdTask
+- Document ForkJoinPool execution and timing in ForkJoinPortfolioApp
+- Add compilation and run commands for Question 04
+- Document Question 05 parallel IoT sensor search engine
+- Explain abstract SensorSearchEngine parent class design
+- Describe minimum temperature reduction in ParallelMinSearch
+- Describe peak vibration reduction in ParallelMaxSearch
+- Document 4-thread array partitioning in SensorGridMonitorApp
+- Add compilation and run commands for Question 05
+- Document Question 06 ConcurrentHashMap vs SynchronizedMap benchmark
+- Explain global lock contention in Collections.synchronizedMap
+- Explain fine-grained bucket locking in ConcurrentHashMap
+- Describe 10-thread 50000-operation throughput test
+- Add compilation and run commands for Question 06
+- Document Question 07 hardware cache locality matrix benchmark
+- Explain Row-Major contiguous memory traversal performance
+- Explain Column-Major cache misses and memory stalls
+- Describe 2000x2000 matrix timing over 10 iterations
+- Add compilation and run commands for Question 07
+- Finalize repository documentation for submission
