@@ -1,4 +1,4 @@
-# PDC Lab - Assignment 2
+# PDC Lab 
 
 ## Parallel and Distributed Computing Lab
 
