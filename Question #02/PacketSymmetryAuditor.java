@@ -14,5 +14,7 @@ public class PacketSymmetryAuditor
             s.push(c);
             q.enqueue(c);
         }
+
+        boolean sym = true;
     }
 }
