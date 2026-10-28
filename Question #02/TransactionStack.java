@@ -26,4 +26,9 @@ public class TransactionStack
     {
         return a[t];
     }
+
+    public boolean isempty()
+    {
+        return t == -1;
+    }
 }
