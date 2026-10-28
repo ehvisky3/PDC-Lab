@@ -1,3 +1,7 @@
-public class TelemetryThread
+public class TelemetryThread extends Thread
 {
+    @Override
+    public void run()
+    {
+    }
 }
