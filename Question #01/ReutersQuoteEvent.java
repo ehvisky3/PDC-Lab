@@ -9,4 +9,14 @@ public class ReutersQuoteEvent extends TradeEvent
         bid = b;
         ask = a;
     }
+
+    @Override
+    public void dispatch()
+    {
+        double spread = ask - bid;
+        System.out.println("Reuters Quote | Sender: " + sender
+                + " | Bid: " + bid
+                + " | Ask: " + ask
+                + " | Spread: " + spread);
+    }
 }
