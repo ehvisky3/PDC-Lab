@@ -12,4 +12,11 @@ public class RequestQueue
         r = -1;
         s = 0;
     }
+
+    public void enqueue(char c)
+    {
+        r++;
+        a[r] = c;
+        s++;
+    }
 }
