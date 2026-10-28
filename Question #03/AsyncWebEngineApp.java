@@ -9,5 +9,6 @@ public class AsyncWebEngineApp
 
         LogProcessorTask p = new LogProcessorTask();
         Thread w = new Thread(p);
+        w.setName("log-worker");
     }
 }
