@@ -5,5 +5,6 @@ public class AsyncWebEngineApp
         System.out.println("main thread name: "+Thread.currentThread().getName());
 
         TelemetryThread t = new TelemetryThread();
+        t.setName("telemetry-worker");
     }
 }
