@@ -8,4 +8,10 @@ public class TransactionStack
         a = new char[c];
         t = -1;
     }
+
+    public void push(char c)
+    {
+        t++;
+        a[t] = c;
+    }
 }
