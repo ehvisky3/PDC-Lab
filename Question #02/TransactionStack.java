@@ -14,4 +14,11 @@ public class TransactionStack
         t++;
         a[t] = c;
     }
+
+    public char pop()
+    {
+        char c = a[t];
+        t--;
+        return c;
+    }
 }
