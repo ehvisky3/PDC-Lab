@@ -10,4 +10,10 @@ public class TradeEvent
         time = t;
         price = p;
     }
+
+    public void dispatch()
+    {
+        System.out.println("Generic Event , Sender: " + sender
+                + " , Time: " + time + " , Price: " + price);
+    }
 }
