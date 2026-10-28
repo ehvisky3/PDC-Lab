@@ -19,4 +19,12 @@ public class RequestQueue
         a[r] = c;
         s++;
     }
+
+    public char dequeue()
+    {
+        char c = a[f];
+        f++;
+        s--;
+        return c;
+    }
 }
