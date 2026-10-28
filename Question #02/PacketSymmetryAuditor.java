@@ -7,5 +7,12 @@ public class PacketSymmetryAuditor
 
         TransactionStack s = new TransactionStack(l);
         RequestQueue q = new RequestQueue(l);
+
+        for(int i = 0; i < l; i++)
+        {
+            char c = p.charAt(i);
+            s.push(c);
+            q.enqueue(c);
+        }
     }
 }
