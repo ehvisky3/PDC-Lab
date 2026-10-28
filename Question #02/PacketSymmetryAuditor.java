@@ -16,5 +16,9 @@ public class PacketSymmetryAuditor
         }
 
         boolean sym = true;
+
+        while(!s.isempty() && !q.isempty())
+        {
+        }
     }
 }
