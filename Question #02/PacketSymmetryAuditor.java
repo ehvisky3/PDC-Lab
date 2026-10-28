@@ -19,6 +19,8 @@ public class PacketSymmetryAuditor
 
         while(!s.isempty() && !q.isempty())
         {
+            char fs = s.pop();
+            char fq = q.dequeue();
         }
     }
 }
