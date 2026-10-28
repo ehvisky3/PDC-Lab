@@ -29,5 +29,14 @@ public class PacketSymmetryAuditor
                 sym = false;
             }
         }
+
+        if(sym)
+        {
+            System.out.println("verified log: packet " + p + " has bi-directional symmetry.");
+        }
+        else
+        {
+            System.out.println("verified log: packet " + p + " does not have symmetry.");
+        }
     }
 }
