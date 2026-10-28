@@ -21,4 +21,9 @@ public class TransactionStack
         t--;
         return c;
     }
+
+    public char peek()
+    {
+        return a[t];
+    }
 }
