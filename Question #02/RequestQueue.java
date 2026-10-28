@@ -27,4 +27,9 @@ public class RequestQueue
         s--;
         return c;
     }
+
+    public boolean isempty()
+    {
+        return s == 0;
+    }
 }
