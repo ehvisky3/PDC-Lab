@@ -21,6 +21,8 @@ public class PacketSymmetryAuditor
         {
             char fs = s.pop();
             char fq = q.dequeue();
+
+            System.out.println("stack pop: " + fs + " | queue dequeue: " + fq);
         }
     }
 }
