@@ -6,5 +6,7 @@ public class AsyncWebEngineApp
 
         TelemetryThread t = new TelemetryThread();
         t.setName("telemetry-worker");
+
+        LogProcessorTask p = new LogProcessorTask();
     }
 }
